@@ -25,7 +25,7 @@ struct ContentView: View {
                                     .frame(width: 120, height: 60)
 
                                 HStack{
-                                    Image(systemName: "paintbrush.pointed.fill")
+                                    Image(systemName: "paintbrush.pointed")
                                         .foregroundColor(.black)
                                     Text("Red")
                                         .font(.system(size: 25))
@@ -46,7 +46,7 @@ struct ContentView: View {
                                     .frame(width: 120, height: 60)
 
                                 HStack{
-                                    Image(systemName: "paintbrush.pointed.fill")
+                                    Image(systemName: "paintbrush.pointed")
                                         .foregroundColor(.black)
                                     Text("Blue")
                                         .font(.system(size: 25))
@@ -70,7 +70,7 @@ struct ContentView: View {
                                     .frame(width: 120, height: 60)
 
                                 HStack{
-                                    Image(systemName: "paintbrush.pointed.fill")
+                                    Image(systemName: "paintbrush.pointed")
                                         .foregroundColor(.black)
                                     Text("Grenn")
                                         .font(.system(size: 25))
