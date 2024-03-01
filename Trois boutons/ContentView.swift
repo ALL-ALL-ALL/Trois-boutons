@@ -8,88 +8,142 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var backgroundColor: Color = .white
 
+    
+    private func toggleBackgroundColor(_ color: Color) {
+            backgroundColor = backgroundColor == color ? .white : color
+        }
+    
 
+    
     var body: some View {
-        VStack{
+        
+        ZStack{
+            
+            backgroundColor.edgesIgnoringSafeArea(.all)
 
-            HStack {
+           
+            
+            VStack{
 
-                        Button {
+                HStack {
 
-                        } label: {
-                            ZStack{
-                                Rectangle()
-                                    .foregroundColor(.red)
-                                    .cornerRadius(10)
-                                    .frame(width: 120, height: 60)
+                            Button {
+                                
+                                toggleBackgroundColor(.red)
 
-                                HStack{
-                                    Image(systemName: "paintbrush.pointed")
-                                        .foregroundColor(.black)
-                                    Text("Red")
-                                        .font(.system(size: 25))
-                                        .foregroundColor(.black)
-                                        .font(.headline)
-                                } // HSTACK
-                            }// fin zstack
-                        } // fin label
-                
-                
-                        Button {
 
-                        } label: {
-                            ZStack{
-                                Rectangle()
-                                    .foregroundColor(.blue)
-                                    .cornerRadius(10)
-                                    .frame(width: 120, height: 60)
 
-                                HStack{
-                                    Image(systemName: "paintbrush.pointed")
-                                        .foregroundColor(.black)
-                                    Text("Blue")
-                                        .font(.system(size: 25))
-                                        .foregroundColor(.black)
-                                        .font(.headline)
-                                } // HSTACK
-                            }// fin zstack
-                        } // fin label
-                
-                
-                
-                
-                
-                        Button {
+                                
+                            } label: {
+                                ZStack{
+                                    
+                                    Rectangle()
+                                        .foregroundColor(.red)
+                                        .cornerRadius(10)
+                                        .frame(width: 120, height: 60)
 
-                        } label: {
-                            ZStack{
-                                Rectangle()
-                                    .foregroundColor(.green)
-                                    .cornerRadius(10)
-                                    .frame(width: 120, height: 60)
-
-                                HStack{
-                                    Image(systemName: "paintbrush.pointed")
-                                        .foregroundColor(.black)
-                                    Text("Grenn")
-                                        .font(.system(size: 25))
-                                        .foregroundColor(.black)
-                                        .font(.headline)
-                                } // HSTACK
-                            }// fin zstack
-                        } // fin label
-                
-                
-                
-                
-                
-                
-                
-   
-            } // HSTACK
+                                    HStack{
+                                        
+                                        Image(systemName: "paintbrush.pointed")
+                                            .foregroundColor(.black)
+                                        Text("Red")
+                                            .font(.system(size: 25))
+                                            .foregroundColor(.black)
+                                            .font(.headline)
+                                        
+                                    } // HSTACK
+                                }// fin zstack
+                            } // fin label
                     
-        } // VSTACK
+                    
+                            Button {
+                                toggleBackgroundColor(.blue)
+
+
+
+                            } label: {
+                                ZStack{
+                                    Rectangle()
+                                        .foregroundColor(.blue)
+                                        .cornerRadius(10)
+                                        .frame(width: 120, height: 60)
+
+                                    HStack{
+                                        Image(systemName: "paintbrush.pointed")
+                                            .foregroundColor(.black)
+                                        Text("Blue")
+                                            .font(.system(size: 25))
+                                            .foregroundColor(.black)
+                                            .font(.headline)
+                                    } // HSTACK
+                                }// fin zstack
+                            } // fin label
+                    
+                    
+                    
+                    
+                    
+                            Button {
+                                toggleBackgroundColor(.green)
+
+
+
+                            } label: {
+                                ZStack{
+                                    Rectangle()
+                                        .foregroundColor(.green)
+                                        .cornerRadius(10)
+                                        .frame(width: 120, height: 60)
+
+                                    HStack{
+                                        Image(systemName: "paintbrush.pointed")
+                                            .foregroundColor(.black)
+                                        Text("Grenn")
+                                            .font(.system(size: 25))
+                                            .foregroundColor(.black)
+                                            .font(.headline)
+                                    } // HSTACK
+                                }// fin zstack
+                            } // fin label
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+       
+                } // HSTACK
+                        
+            } // VSTACK
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        }
+        
+        
+        
+        
   
     } // FIN BODY
     
